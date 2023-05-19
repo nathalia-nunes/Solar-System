@@ -5,11 +5,18 @@ export default class MissionCard extends Component {
   render() {
     const { name, year, country, destination } = this.props;
     return (
-      <div data-testid="mission-card">
-        <p data-testid="mission-name">{ name }</p>
-        <p data-testid="mission-year">{ year }</p>
-        <p data-testid="mission-country">{ country }</p>
-        <p data-testid="mission-destination">{ destination }</p>
+      <div className="mission-card">
+        <div className="mission-icon">
+          <span className="material-symbols-outlined">
+            rocket_launch
+          </span>
+        </div>
+        <div className="mission-text">
+          <p data-testid="mission-name">{ name }</p>
+          <p data-testid="mission-year">{ year }</p>
+          <p data-testid="mission-country">{ country }</p>
+          <p data-testid="mission-destination">{ destination }</p>
+        </div>
       </div>
     );
   }
